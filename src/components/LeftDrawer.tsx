@@ -119,12 +119,12 @@ function LeftDrawer(props: NavProps) {
       case "/aitedmint":
         setActivePage("AITedMint");
         break;
-      // case "/teddyclaims":
-      //   setActivePage("TeddyClaims");
-      //   break;
-      // case "/tedclaims":
-      //   setActivePage("TedClaims");
-      //   break;
+      case "/teddyclaims":
+        setActivePage("TeddyClaims");
+        break;
+      case "/tedclaims":
+        setActivePage("TedClaims");
+        break;
       case "/traitswapteds":
         setActivePage("TraitSwapTeds");
         break;
@@ -151,36 +151,20 @@ function LeftDrawer(props: NavProps) {
         setActivePage("Dashboard");
         handleMobileClick();
         break;
-      case "HowToPlay":
+      case "Documents":
         window.open("https://docs.furyofthefur.com");
         handleMobileClick();
         break;
-      case "News":
-        navigate("/News");
+      case "Downloads":
+        window.open(
+          "https://drive.google.com/drive/folders/1_FHhUhooWOXxfJoNaS1YBKgvMLMjsCPN?usp=sharing"
+        );
         handleMobileClick();
         break;
-      case "Campaigns":
-        navigate("/Campaigns");
+      case "Shop":
+        window.open("https://shopfotf.com");
         handleMobileClick();
         break;
-      case "PackOpening":
-        navigate("/PackOpening");
-        handleMobileClick();
-        break;
-      case "MyCards":
-        navigate("/MyCards");
-        handleMobileClick();
-        break;
-      // case "Downloads":
-      //   window.open(
-      //     "https://drive.google.com/drive/folders/1_FHhUhooWOXxfJoNaS1YBKgvMLMjsCPN?usp=sharing"
-      //   );
-      //   handleMobileClick();
-      //   break;
-      // case "Shop":
-      //   window.open("https://shopfotf.com");
-      //   handleMobileClick();
-      //   break;
       case "HoneyStore":
         navigate("/HoneyStore");
         setActivePage("HoneyStore");
@@ -201,16 +185,16 @@ function LeftDrawer(props: NavProps) {
         setActivePage("AITedMint");
         handleMobileClick();
         break;
-      // case "TedClaims":
-      //   navigate("/TedClaims");
-      //   setActivePage("TedClaims");
-      //   handleMobileClick();
-      //   break;
-      // case "TeddyClaims":
-      //   navigate("/TeddyClaims");
-      //   setActivePage("TeddyClaims");
-      //   handleMobileClick();
-      //   break;
+      case "TedClaims":
+        navigate("/TedClaims");
+        setActivePage("TedClaims");
+        handleMobileClick();
+        break;
+      case "TeddyClaims":
+        navigate("/TeddyClaims");
+        setActivePage("TeddyClaims");
+        handleMobileClick();
+        break;
       case "BuildATeddy":
         navigate("/BuildATeddy");
         setActivePage("BuildATeddy");
@@ -303,7 +287,7 @@ function LeftDrawer(props: NavProps) {
           </Box>
         </Toolbar>
         <List>
-          {/* <ListItem
+          <ListItem
             key={"Dashboard"}
             disablePadding
             onClick={() => loadPage("Dashboard")}
@@ -316,42 +300,18 @@ function LeftDrawer(props: NavProps) {
             </ListItemButton>
           </ListItem>
           <ListItem
-            key={"HowToPlay"}
+            key={"Documents"}
             disablePadding
-            onClick={() => loadPage("HowToPlay")}
+            onClick={() => loadPage("Documents")}
           >
-            <ListItemButton selected={activePage === "HowToPlay"}>
+            <ListItemButton selected={activePage === "Documents"}>
               <ListItemIcon>
                 <DescriptionOutlinedIcon fontSize="small" />
               </ListItemIcon>
-              <ListItemText primary={"How To Play"} />
+              <ListItemText primary={"Documents"} />
             </ListItemButton>
           </ListItem>
           <ListItem
-            key={"News"}
-            disablePadding
-            onClick={() => loadPage("News")}
-          >
-            <ListItemButton selected={activePage === "News"}>
-              <ListItemIcon>
-                <DescriptionOutlinedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary={"News"} />
-            </ListItemButton>
-          </ListItem>
-          <ListItem
-            key={"Campaigns"}
-            disablePadding
-            onClick={() => loadPage("Campaigns")}
-          >
-            <ListItemButton selected={activePage === "Campaigns"}>
-              <ListItemIcon>
-                <DescriptionOutlinedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary={"Campaigns"} />
-            </ListItemButton>
-          </ListItem> */}
-          {/* <ListItem
             key={"Downloads"}
             disablePadding
             onClick={() => loadPage("Downloads")}
@@ -362,8 +322,8 @@ function LeftDrawer(props: NavProps) {
               </ListItemIcon>
               <ListItemText primary={"Downloads"} />
             </ListItemButton>
-          </ListItem> */}
-          {/* <ListItem
+          </ListItem>
+          <ListItem
             key={"Shop"}
             disablePadding
             onClick={() => loadPage("Shop")}
@@ -374,9 +334,9 @@ function LeftDrawer(props: NavProps) {
               </ListItemIcon>
               <ListItemText primary={"Shop"} />
             </ListItemButton>
-          </ListItem> */}
+          </ListItem> 
         </List>
-        {/* <Divider />
+        <Divider />
         <Typography sx={{ marginTop: "10px", paddingLeft: "18px" }}>
           Minting
         </Typography>
@@ -420,13 +380,13 @@ function LeftDrawer(props: NavProps) {
               <Chip size="small"  label={<Typography sx={{fontSize: "15px"}}> New &#x2728; </Typography>} color="primary" sx={{maxHeight: "40px", maxWidth: "70px", marginRight: "50px", marginBottom: "15px", border: "none"}} variant="outlined"/>
             </ListItemButton>
           </ListItem>
-        </List> */}
-        {/* <Divider />
+        </List>
+        <Divider />
         <Typography sx={{ marginTop: "10px", paddingLeft: "18px" }}>
           Utility
         </Typography>
-        <List> */}
-          {/* <ListItem
+        <List> 
+          <ListItem
             key={"BuildATeddy"}
             disablePadding
             onClick={() => loadPage("BuildATeddy")}
@@ -437,8 +397,8 @@ function LeftDrawer(props: NavProps) {
               </ListItemIcon>
               <ListItemText primary={"Build A Teddy"} />
             </ListItemButton>
-          </ListItem> */}
-          {/* <ListItem
+          </ListItem> 
+          <ListItem
             key={"TraitSwapTeds"}
             disablePadding
             onClick={() => loadPage("TraitSwapTeds")}
@@ -449,36 +409,9 @@ function LeftDrawer(props: NavProps) {
               </ListItemIcon>
               <ListItemText primary={"Trait Swap Teds"} />
             </ListItemButton>
-          </ListItem> */}
-          {/* <ListItem
-            key={"PackOpening"}
-            disablePadding
-            onClick={() => loadPage("PackOpening")}
-          >
-            <ListItemButton selected={activePage === "PackOpening"}>
-              <ListItemIcon>
-                <PrecisionManufacturingOutlinedIcon fontSize="small" />
-              </ListItemIcon>
-              <Box className="row">
-                <ListItemText primary={"Pack Opening"} />
-                <Chip size="small"  label={<Typography sx={{fontSize: "15px"}}> New &#x2728; </Typography>} color="primary" sx={{ justifyContent: "flex-start", textAlign: "start", alignItems: "flex-start", marginRight: "45px", marginBottom: "15px", border: "none"}} variant="outlined"/>
-              </Box>
-            </ListItemButton>
           </ListItem>
+         
           <ListItem
-            key={"MyCards"}
-            disablePadding
-            onClick={() => loadPage("MyCards")}
-          >
-            <ListItemButton selected={activePage === "MyCards"}>
-              <ListItemIcon>
-                <ImageOutlinedIcon fontSize="small" />
-              </ListItemIcon>
-              <ListItemText primary={"My Cards"} />
-              <Chip size="small"  label={<Typography sx={{fontSize: "15px"}}> New &#x2728; </Typography>} color="primary" sx={{ justifyContent: "flex-start", textAlign: "start", alignItems: "flex-start", marginRight: "55px", marginBottom: "15px", border: "none"}} variant="outlined"/>
-            </ListItemButton>
-          </ListItem> */}
-          {/* <ListItem
             key={"HoneyExchange"}
             disablePadding
             onClick={() => loadPage("HoneyExchange")}
@@ -537,7 +470,7 @@ function LeftDrawer(props: NavProps) {
               </Box>
               </ListItemButton>
           </ListItem>
-          {/* <ListItem
+          <ListItem
             key={"TedClaims"}
             disablePadding
             onClick={() => loadPage("TedClaims")}
@@ -561,8 +494,8 @@ function LeftDrawer(props: NavProps) {
               <ListItemText primary={"Teddy Claims"} />
             </ListItemButton>
           </ListItem>
-           */}
         </List>
+      </List>
         
         <Box
           sx={{
